@@ -1,0 +1,8 @@
+<nav class="navbar container-fluid bg-secondary">
+    <div class="container d-flex justify-content-between w-100">
+      <a class="navbar-brand d-block text-white" href="{% url 'home' %}">Leadplus</a>
+     {% if not request.path == '/login/' %} 
+     <a class="navbar-brand d-block text-white" href="#">Logout</a> 
+     {% endif %}
+    </div>
+</nav>

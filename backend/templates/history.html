@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container w-50'>
+<!-- incident history -->
+  <h2 class="mt-4">Return to home page</h2>
+<div class="history d-flex justify-content-between">
+  <!-- Filter Components -->
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Filter Components
+    </button>
+    <ul class="dropdown-menu">
+      <input
+        class="form-control"
+        id="history__search"
+        type="text"
+        placeholder="Search.."
+      />
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
+  <!-- Slide -->
+  <div>
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button type="button" class="btn btn-sm bg-white border border-gray">
+        <i class="fa-solid fa-angle-left" style="color: black"></i>
+      </button>
+      <button type="button" class="btn bg-white">
+        <span class="fs-9">December 2023 to February 2024</span>
+      </button>
+      <button type="button" class="btn btn-sm bg-white border border-gray">
+        <i class="fa-solid fa-angle-right" ="color:black"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="history-items">
+  <!-- History item -->
+  <div class="history-item">
+    <h3>May 2023</h3>
+    <div class="d-flex flex-column gap-4">
+      <div class="card">
+        <div class="card-header history-item__title">Quote</div>
+        <div class="card-body">
+          <p class="history-item__desc">
+            A well-known quote, contained in a blockquote element.
+          </p>
+          <span class="history-item__date">May 19, 16:33 - 16:33 EDT</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header history-item__title">Quote</div>
+        <div class="card-body">
+          <p class="history-item__desc">
+            A well-known quote, contained in a blockquote element.
+          </p>
+          <span class="history-item__date">May 19, 16:33 - 16:33 EDT</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-2">
+      <button class="btn btn-white border border-black w-100">
+        +2 Show All 2 Incidents
+      </button>
+    </div>
+  </div>
+  <!-- History item -->
+  <div class="history-item">
+    <h3>May 2023</h3>
+    <div class="d-flex flex-column gap-4">
+      <div class="card">
+        <div class="card-header history-item__title">Quote</div>
+        <div class="card-body">
+          <p class="history-item__desc">
+            A well-known quote, contained in a blockquote element.
+          </p>
+          <span class="history-item__date">May 19, 16:33 - 16:33 EDT</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header history-item__title">Quote</div>
+        <div class="card-body">
+          <p class="history-item__desc">
+            A well-known quote, contained in a blockquote element.
+          </p>
+          <span class="history-item__date">May 19, 16:33 - 16:33 EDT</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-2">
+      <button class="btn btn-white border border-black w-100">
+        +2 Show All 2 Incidents
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock content %}

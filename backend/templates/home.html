@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+ <!-- Aleart -->
+ <div class='container w-50'>
+ <div
+ class="alert alert-primary d-flex justify-content-between alert-custom"
+ role="alert"
+>
+ <span>All Systems Operational</span>
+ <span>Refreshed less than 1 minute ago</span>
+</div>
+
+<!-- About this site -->
+<div class="about-this-site">
+ <h2 class="about-this-site__title">About this site</h2>
+ <p class="about-this-site__content">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+   reiciendis ipsum. Adipisci, dolorem ea dolor consequuntur suscipit
+   veniam quia fugiat modi ut. Illum hic corporis dolorum cupiditate
+   aperiam tenetur error?
+ </p>
+</div>
+
+<!-- List items -->
+<div class="items border rounded">
+ <!-- Item operational-->
+ <div
+   class="d-flex justify-content-between align-items-center px-2 border-bottom items_item__operational"
+ >
+   <div class="p-2 d-flex gap-1">
+     <span class="items__item__operational__icon"
+       ><i class="fa-solid fa-circle-check"></i
+     ></span>
+     <div class="items__item__default__notice">
+       <span>
+         <!-- Icon -->
+         Notice
+       </span>
+       <br />
+       <span class="items__item__default__log"> No know issues </span>
+     </div>
+   </div>
+   <div>
+     <button class="btn btn-outline-dark btn-operational">
+       Operational
+     </button>
+   </div>
+ </div>
+ <!-- Item maintenance-->
+ <div
+   class="d-flex justify-content-between align-items-center px-2 border-bottom"
+ >
+   <div class="p-2 d-flex gap-1">
+     <span class="items__item__icon items__item__maintenance__icon"
+       ><i class="fa-solid fa-clock"></i></span>
+     <div class="items__item__notice">
+       <span>
+         <!-- Icon -->
+         Notice
+       </span>
+       <br />
+       <span class="items__item__default__log">
+         1 issues
+         <ul>
+           <li>Hubspot is current bla...</li>
+         </ul>
+       </span>
+     </div>
+   </div>
+   <div>
+     <button class="btn btn-outline-dark btn-maintenance">
+       Maintenance
+     </button>
+   </div>
+ </div>
+ <!-- Item partial outage-->
+ <div
+   class="d-flex justify-content-between align-items-center px-2 border-bottom"
+ >
+   <div class="p-2 d-flex gap-1">
+     <span class="items__item__icon items__item__partial-outage__icon"
+       ><i class="fa-solid fa-circle-exclamation"></i></span>
+     <div
+       class="items__item__notice items__item__partial-outage__notice"
+     >
+       <span>
+         <!-- Icon -->
+         Notice
+       </span>
+       <br />
+       <span class="items__item__default__log">
+         1 issues
+         <ul>
+           <li>Hubspot is current bla...</li>
+         </ul>
+       </span>
+     </div>
+   </div>
+   <div>
+     <button class="btn btn-outline-dark btn-partial-outage">
+       Degrated
+     </button>
+   </div>
+ </div>
+
+ <!-- Item outage-->
+ <div
+   class="d-flex justify-content-between align-items-center px-2 border-bottom"
+ >
+   <div class="p-2 d-flex gap-1">
+     <span class="items__item__icon items__item__partial-outage__icon"
+       ><i class="fa-solid fa-triangle-exclamation"></i></span>
+     <div
+       class="items__item__notice items__item__partial-outage__notice"
+     >
+       <span>
+         <!-- Icon -->
+         Notice
+       </span>
+       <br />
+       <span class="items__item__default__log">
+         1 issues
+         <ul>
+           <li>Hubspot is current bla...</li>
+         </ul>
+       </span>
+     </div>
+   </div>
+   <div>
+     <button class="btn btn-outline-dark btn-partial-outage">
+       Outage
+     </button>
+   </div>
+ </div>
+</div>
+</div>
+{% endblock content %}

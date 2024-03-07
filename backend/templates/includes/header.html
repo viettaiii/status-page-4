@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="container w-50 mt-5 d-flex flex-column gap-2">
+  <!-- Header -->
+  <div class="d-flex justify-content-between header align-items-center">
+    <!-- Logo -->
+    <div class="d-flex gap-2 align-items-center">
+      <div>
+        <div class="card header__logo">
+          <img
+            src="{% static 'images/logo.png' %}"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="header__vertical-line"></div>
+      <!-- Title -->
+      <h3 class="header__status">Status</h3>
+    </div>
+    <!-- Button -->
+    
+    {% if request.path == '/' %} 
+      <a href="{% url 'history' %}">
+        <button class="btn btn-danger header__btn">Past Incidents</button>
+      </a>
+    {% elif request.path == '/history/' or request.path == '/detail/' %} 
+      <a href="{% url 'home' %}">
+        <button class="btn btn-danger header__btn">Return to home page</button>
+      </a>
+    {% endif %}
+    
+  </div>
+  <!-- Body -->
+</div>
