@@ -3,24 +3,24 @@
 {% load static %}
 
 {% block javascript %}
-  <script src="{% static 'books/js/books.js' %}"></script>
+  <script src="{% static 'functions/js/function.js' %}"></script>
 {% endblock %}
 {% block header %}
-  {% include 'books/includes/header.html' %}
+  {% include 'functions/includes/header.html' %}
 {% endblock %}
 
 {% block content %}
 <div class='container '>
-  <h1 class="page-header">Books</h1>
+  <h1 class="page-header">Functions</h1>
 
   <p>
-    <button type="button" class="btn btn-primary js-create-book" data-url="{% url 'book_create' %}">
+    <button type="button" class="btn btn-primary js-create-function" data-url="{% url 'function_create' %}">
       <span class="glyphicon glyphicon-plus"></span>
-      New book
+      New function
     </button> 
   </p>
 
-  <table class="table" id="book-table">
+  <table class="table" id="function-table">
     <thead>
       <tr>
         <th>#</th>
@@ -31,11 +31,11 @@
       </tr>
     </thead>
     <tbody>
-      {% include 'books/includes/partial_book_list.html' %}
+      {% include 'functions/includes/partial_function_list.html' %}
     </tbody>
   </table>
 
-  <div class="modal fade" id="modal-book">
+  <div class="modal fade" id="modal-function">
     <div class="modal-dialog">
       <div class="modal-content">
 

@@ -1,0 +1,25 @@
+{% for function in functions %}
+  <tr>
+    <td>{{ function.id }}</td>
+    <td>{{ function.title }}</td>
+    <td>{{ function.publication_date }}</td>
+    <td>{{ function.function_type }}</td>
+    
+    <td style="width: 150px">
+      <button type="button"
+              class="btn btn-warning btn-sm js-update-function"
+              data-url="{% url 'function_update' function.id %}">
+        <span class="glyphicon glyphicon-pencil"></span> Edit
+      </button>
+      <button type="button"
+              class="btn btn-danger btn-sm js-delete-function"
+              data-url="{% url 'function_delete' function.id %}">
+        <span class="glyphicon glyphicon-trash"></span> Delete
+      </button>
+    </td>
+  </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No function</td>
+  </tr>
+{% endfor %}
